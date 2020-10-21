@@ -5,7 +5,7 @@ let app = express()
 let db
 
 app.use(express.static('public'));
-var port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 let connectionString = 'mongodb+srv://pradamit:pradamit@cluster1-2nlkc.mongodb.net/test?retryWrites=true&w=majority'
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client) {
